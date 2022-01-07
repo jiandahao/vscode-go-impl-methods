@@ -1,8 +1,8 @@
 {
   "name": "vscode-go-impl-methods",
   "publisher": "jiandahao",
-  "displayName": "Generate Stubs for Golang Interfaces, and extract interface for Golang Structure",
-  "description": "Automatically implement interface methods and extract interface for Golang by using code generation",
+  "displayName": "Tools for generating and extracting Golang interface",
+  "description": "Automatically implement and extract interface for Golang by using code generation",
   "version": "0.0.0-development",
   "icon": "img/icon.png",
   "license": "SEE LICENSE IN LICENSE",
