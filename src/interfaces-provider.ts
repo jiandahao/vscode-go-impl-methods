@@ -11,3 +11,14 @@ export async function provideInterfaces(keyword: string, callback: (inter: strin
       callback(interfaces);
     });
 }
+
+export async function provideMethods(keyword: string, callback: (inter: string[]) => void) {
+  vscode.commands.executeCommand("vscode.executeWorkspaceSymbolProvider", keyword)
+  .then((objects: any) => {
+    const interfaces = _.chain(objects as vscode.SymbolInformation[])
+      .filter({ 'kind': vscode.SymbolKind.Struct })
+      .map((obj) => obj.name)
+      .value();
+    callback(interfaces);
+  });
+}
